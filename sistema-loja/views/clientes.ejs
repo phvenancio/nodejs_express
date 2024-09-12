@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+<body>
+    <%- include("partials/navbar.ejs") %>
+    <table border="1px">
+        <tr>
+            <th>Nome:</th>
+            <th>CPF:</th>
+            <th>Endereço:</th>
+        </tr>
+        <% listaClientes.forEach((listaClientes) => { %>
+        <tr>
+            <td><%= listaClientes.nome %></td>
+            <td><%= listaClientes.cpf %></td>
+            <td><%= listaClientes.endereco %></td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
