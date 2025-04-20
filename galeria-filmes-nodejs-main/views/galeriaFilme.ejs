@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div class="card-body">
+    <div class="row">
+        <% filmes.forEach(filme => { %>
+        <div class="border rounded col-md-1 m-auto d-flex flex-column justify-content-center align-items-center">
+            <img class="img-thumbnail" src="/uploads/<%= filme.imagem %>" style="max-width: 150px; max-height: 250px;" alt="Imagem">
+            <h6><%= filme.titulo %></h6>
+            <p><%= filme.duracao %> - <%= filme.anoLancamento %></p>
+            <a style="color: red;" href="/galeriaFilme/delete/<%= filme.id %>">Excluir</a>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h1>Cadastro de Filmes:</h1>
+        </div>
+        <form action="/cadastroFilme/new" method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="imagem" accept="image/png, image/jpeg, image/jpg" required>
+            <label class="text">Título:</label>
+            <input class="form-control" type="text" name="titulo" placeholder="Titulo" required>
+            <label class="text">Ano de Lançamento:</label>
+            <input class="form-control" type="number" name="anoLancamento" placeholder="2024" required>
+            <label class="text">Duração:</label>
+            <input class="form-control" type="time" name="duracao" required>
+            <input class="btn btn-success w-100" type="submit">
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

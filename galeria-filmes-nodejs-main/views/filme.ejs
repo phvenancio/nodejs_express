@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<div style="max-height: 390px; max-width: 190px" class="bg-light border rounded-3 col-md-3 m-auto d-flex flex-column justify-content-center align-items-center">
+    <div>
+        <img class="img-thumbnail" src="/uploads/<%= filme.imagem %>" style="max-height: 250px; max-width: 150px">
+    </div>
+    <div>
+        <h5><%= filme.titulo %></h5>
+    </div>
+    <div>
+        <p><%= filme.duracao %></p>
+    </div>
+    <div>
+        <p><%= filme.anoLancamento %></p>
+    </div>
+    <div>
+        <a style="color: red;" href="/filme/delete/<%= filme.id %>">Excluir</a>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
